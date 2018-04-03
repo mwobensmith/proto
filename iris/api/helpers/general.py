@@ -47,17 +47,15 @@ def confirm_firefox_launch():
         f = wait("home.png", 20)
     except Exception as e:
         logger.error(e)
-        print ("Can't launch Firefox - aborting test run.")
+        logger.error("Can't launch Firefox - aborting test run.")
         exit(1)
-    x, y = find("home.png")
-    print "FOUND: %s %s" % (x,y)
 
 
 def confirm_firefox_quit():
     try:
         waitVanish("home.png", 10)
     except:
-        print ("Firefox still around - aborting test run.")
+        logger.error("Firefox still around - aborting test run.")
         exit(1)
 
 

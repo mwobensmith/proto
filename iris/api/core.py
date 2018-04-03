@@ -459,7 +459,7 @@ class KeyModifier(object):
             (KeyModifier.CTRL, "ctrl")]
 
         if get_os() == "osx":
-            all_modifiers.append((KeyModifier.CMD, "cmd"))
+            all_modifiers.append((KeyModifier.CMD, "command"))
         else:
             # TODO: verify that Linux is same as Windows
             all_modifiers.append((KeyModifier.WIN, "win"))
