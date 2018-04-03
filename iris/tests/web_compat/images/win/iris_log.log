@@ -1,0 +1,21 @@
+[INFO] 2018-03-19 10:55:21 [iris] Running with default installed Firefox build
+[INFO] 2018-03-19 10:55:21 [test_runner] Running tests
+[INFO] 2018-03-19 10:55:21 [test_runner] Running test case: This is a test of a bunch of tabs 
+[INFO] 2018-03-19 10:55:33 [test_runner] Running test case: This is a test for text search in page 
+[INFO] 2018-03-19 10:55:40 [test_runner] Running test case: This is an empty test case that does nothing 
+[INFO] 2018-03-19 10:55:44 [test_runner] Running test case: This is a test of creating various Firefox instances with arguments 
+[INFO] 2018-03-19 10:56:24 [test_runner] Running test case: This is a test of browser back/forward 
+[INFO] 2018-03-19 10:56:38 [test_runner] Running test case: This is a test of new tab preferences search 
+[INFO] 2018-03-19 10:56:46 [test_runner] Running test case: This tests the ability to activate/deactivate the activity stream 
+[INFO] 2018-03-19 10:57:23 [test_runner] Running test case: This is a test of basic URL navigation via awesomebar 
+[INFO] 2018-03-19 10:57:31 [test_runner] Running test case: This is a test for adding a website in the bookmarks section 
+[INFO] 2018-03-19 10:57:40 [test_runner] Running test case: This is a test for clearing browser history 
+[INFO] 2018-03-19 10:58:00 [test_runner] Running test case: This is a test for checking private browsing navigation 
+[INFO] 2018-03-19 10:58:08 [test_runner] Running test case: Web compability test for youtube.com 
+[INFO] 2018-03-19 10:58:13 [test_runner] Running test case: Web compability test for facebook.com--Login 
+[ERROR] 2018-03-19 10:58:22 [config_parser] Config file not found
+[ERROR] 2018-03-19 10:58:22 [config_parser] Config file not found
+[INFO] 2018-03-19 10:58:26 [test_runner] Running test case: Web compability test for linkedin.com 
+[INFO] 2018-03-19 10:58:31 [test_runner] Running test case: Web compability test for baidu.com 
+[INFO] 2018-03-19 10:58:35 [test_runner] Running test case: Web compability test for amazon.com 
+[INFO] 2018-03-19 10:58:40 [test_runner] Running test case: Web compability test for wikipedia.org 
