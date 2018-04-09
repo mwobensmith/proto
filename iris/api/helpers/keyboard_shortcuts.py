@@ -2,12 +2,7 @@
 # License, v. 2.0. If a copy of the MPL was not distributed with this file,
 # You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import time
 from api.core import *
-from logger.iris_logger import *
-
-
-logger = getLogger(__name__)
 
 
 # This helper defines keyboard shortcuts for many common actions in Firefox usage.
@@ -452,6 +447,9 @@ def maximize_window():
     This is NOT Full Screen mode
     """
     if get_os() == "osx":
+
+        # temporarily disabling on Mac due to errors
+        return
         # There is no keybpard shortcut for this on Mac. We'll do it the old fashioned way.
         # This image is of the three window control buttons at top left of the window.
         window_controls = "window_controls.png"
@@ -460,7 +458,7 @@ def maximize_window():
         maximize_button = Pattern(window_controls).targetOffset(21, 0)
 
         # We must hover the controls so the ALT key can take effect there.
-        hover(window_controls)
+        hover(image=window_controls)
 
         # Alt key changes maximize button from full screen to maximize window.
         keyDown(Key.ALT)
@@ -613,6 +611,14 @@ def clear_recent_history():
     """
     if get_os() == "osx":
         type(text=Key.DELETE, modifier=KeyModifier.CMD + KeyModifier.SHIFT)
+
+        # Working around a pyautogui bug on Mac.
+        # The key combination above causes the windows to disappear, i.e.:
+        # pyautoguy.hotkey ("shift", "command", "delete")
+        # Press the "fn" key twice to get back into the correct window state
+
+        type(text=Key.FN)
+        type(text=Key.FN)
     else:
         type(text=Key.DELETE, modifier=KeyModifier.CTRL + KeyModifier.SHIFT)
 

@@ -44,9 +44,8 @@ def clean_profiles():
 # waits for firefox to exist by waiting for the home button to be present
 def confirm_firefox_launch():
     try:
-        f = wait("home.png", 20)
-    except Exception as e:
-        logger.error(e)
+        wait("home.png", 20)
+    except Exception:
         logger.error("Can't launch Firefox - aborting test run.")
         exit(1)
 
@@ -72,14 +71,14 @@ def get_firefox_region():
 #
 def navigate_slow(url):
     select_location_bar()
-    typewrite(url, 0.1)
-    typewrite(["enter"])
+    type(url, 0.1)
+    type(Key.ENTER)
 
 
 def navigate(url):
     select_location_bar()
-    typewrite(url)
-    typewrite(["enter"])
+    type(url)
+    type(Key.ENTER)
 
 
 def restart_firefox(args):
@@ -148,8 +147,8 @@ def reset_mouse():
 
 
 def login_site(site_name):
-    username = get_credential(site_name,"username")
-    password = get_credential(site_name,"password")
+    username = get_credential(site_name, "username")
+    password = get_credential(site_name, "password")
     paste(username)
     focus_next_item()
     paste(password)
